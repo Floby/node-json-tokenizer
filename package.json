@@ -1,0 +1,25 @@
+{
+  "name": "json-tokenizer",
+  "version": "1.0.0",
+  "description": "A streaming JSON tokenizer",
+  "main": "JsonTokenizer.js",
+  "scripts": {
+    "test": "nodeunit test/test-*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Floby/node-json-tokenizer.git"
+  },
+  "keywords": [
+    "stream",
+    "streaming",
+    "json",
+    "tokenizer",
+    "tokenize"
+  ],
+  "author": "Florent Jaby <florent.jaby@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Floby/node-json-tokenizer/issues"
+  }
+}

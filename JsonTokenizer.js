@@ -10,7 +10,7 @@ module.exports = function JsonTokenizer() {
     t.addRule(/^\[$/, 'begin-array');
     t.addRule(/^\]$/, 'end-array');
 
-    t.addRule(/^"([^"]|\\")*"$/, 'string');
+    t.addRule(/^"(\\["\\/bfnrtu"]|[^"\\"])*"$/, 'string');
     t.addRule(/^"([^"]|\\")*$/, 'maybe-string');
     t.addRule(/^null$/, 'null');
     t.addRule(/^(true|false)$/, 'boolean');

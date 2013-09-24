@@ -21,5 +21,12 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Floby/node-json-tokenizer/issues"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8.1",
+    "stream-sink": "~1.2.0"
+  },
+  "dependencies": {
+    "tokenizer": "~1.1.2"
   }
 }

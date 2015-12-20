@@ -1,6 +1,6 @@
 var Tokenizer = require('tokenizer');
 
-module.exports = function JsonTokenizer() {
+module.exports = function JsonTokenizer(options) {
     var t = new Tokenizer();
     
     t.addRule(/^,$/, 'comma');
@@ -24,7 +24,9 @@ module.exports = function JsonTokenizer() {
     t.addRule(/^\w+$/, 'symbol');
 
     t.addRule(Tokenizer.whitespace);
-    t.ignore('whitespace');
+    if (options == null || !options.whitespace) {
+        t.ignore('whitespace');
+    }
     // if we had comments tokens, we would ignore them as well
     // but the JSON spec doesn't allow comments!
     

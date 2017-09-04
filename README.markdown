@@ -38,6 +38,24 @@ t.end('[8, {}]');
 
 more usually you have a readable stream with a json document that you pipe to this.
 
+## Interface
+
+```javascript
+var tokenizer = require('json-tokenizer');
+var t = tokenizer();
+```
+
+The module exports a single function, which returns a [Tokenizer](https://github.com/Floby/node-tokenizer) stream.
+
+```javascript
+var tokenizer = require('json-tokenizer');
+var t = tokenizer({'whitespace': true});
+```
+
+The function optionally takes an `options` object as a parameter:
+
+* `whitespace`: If `true`, create `whitespace` tokens in the output stream. Defaults to `false`.
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
